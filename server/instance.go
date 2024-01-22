@@ -224,8 +224,7 @@ func hasInit(instance *instanceData) bool {
 	if !hasIt {
 		return false
 	}
-
-	if m.Type.NumIn() != 0 || m.Type.NumOut() != 1 {
+	if m.Type.NumIn() != 1 || m.Type.NumOut() != 1 {
 		log.Printf("Wrong Init signature")
 		return false
 	}
